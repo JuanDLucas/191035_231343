@@ -56,6 +56,29 @@ namespace _191035_231343.Models
                 MessageBox.Show(e.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        public DataTable Consultar()
+        {
+            try
+            {
+                Banco.AbrirConexao();
+                Banco.Comando = new MySqlCommand("SELECT * FROM CIDADES " +
+                                                "WHERE NOME LIKE @NOME " +
+                                                "ORDER BY NOME", Banco.Conexao);
+                Banco.Comando.Parameters.AddWithValue("@NOME", nome );
+
+                Banco.Adaptador = new MySqlDataAdapter();
+                Banco.datTabela = new DataTable();
+                Banco.Adaptador.Fill(Banco.datTabela);
+                Banco.FecharConexao();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return Banco.datTabela;
+        }
     }
 
     
