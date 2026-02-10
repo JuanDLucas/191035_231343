@@ -68,6 +68,16 @@ namespace _191035_231343
                                            "uf char(02))", Conexao);
                 Comando.ExecuteNonQuery();
 
+                // Cria tabela usuários
+                Comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS USUARIOS " +
+                                           "(id integer auto_increment primary key, " +
+                                           "nome varchar(50), " +
+                                           "login varchar(30), " +
+                                           "senha varchar(20), " +
+                                           "funcao varchar(50))", Conexao);
+                Comando.ExecuteNonQuery();
+
+
 
                 // Chama a função para fechar a conexão com o banco
                 FecharConexao();

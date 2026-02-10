@@ -11,35 +11,41 @@ using System.Windows.Forms;
 
 namespace _191035_231343.Views
 {
-    public partial class FrmCidades : Form
+    public partial class FrmUsuarios : Form
     {
-        Cidade c;
-        public FrmCidades()
+        Usuario u;
+        public FrmUsuarios()
         {
             InitializeComponent();
         }
-
         void limpaControles()
         {
             txtID.Clear();
             txtNome.Clear();
-            txtUF.Clear();
+            txtFuncao.Clear();
+            txtLogin.Clear();
+            txtSenha.Clear();
             txtPesquisa.Clear();
         }
 
         void carregarGrid(string pesquisa)
         {
-            c = new Cidade()
+            u = new Usuario()
             {
                 nome = pesquisa
             };
-            dgvCidades.DataSource = c.Consultar();
+            dgvUsuarios.DataSource = u.Consultar();
         }
 
-        private void FrmCidades_Load(object sender, EventArgs e)
+        private void FrmUsuarios_Load(object sender, EventArgs e)
         {
             limpaControles();
             carregarGrid("");
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

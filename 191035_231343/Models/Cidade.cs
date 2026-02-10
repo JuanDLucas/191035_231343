@@ -65,9 +65,9 @@ namespace _191035_231343.Models
                 Banco.Comando = new MySqlCommand("SELECT * FROM CIDADES " +
                                                 "WHERE NOME LIKE @NOME " +
                                                 "ORDER BY NOME", Banco.Conexao);
-                Banco.Comando.Parameters.AddWithValue("@NOME", nome );
+                Banco.Comando.Parameters.AddWithValue("@NOME", nome + "%");
 
-                Banco.Adaptador = new MySqlDataAdapter();
+                Banco.Adaptador = new MySqlDataAdapter(Banco.Comando);
                 Banco.datTabela = new DataTable();
                 Banco.Adaptador.Fill(Banco.datTabela);
                 Banco.FecharConexao();

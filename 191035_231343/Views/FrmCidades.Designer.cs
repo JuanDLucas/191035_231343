@@ -234,6 +234,7 @@
             this.Name = "FrmCidades";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Cidades";
+            this.Load += new System.EventHandler(this.FrmCidades_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCidades)).EndInit();

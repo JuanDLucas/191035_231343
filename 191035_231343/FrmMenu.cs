@@ -28,5 +28,11 @@ namespace _191035_231343
             FrmCidades form = new FrmCidades();
             form.Show();
         }
+
+        private void usuáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmUsuarios form = new FrmUsuarios();
+            form.Show();
+        }
     }
 }
