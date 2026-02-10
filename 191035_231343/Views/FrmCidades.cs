@@ -27,6 +27,7 @@ namespace _191035_231343.Views
             txtPesquisa.Clear();
         }
 
+        // carrega dados do banco no grid
         void carregarGrid(string pesquisa)
         {
             c = new Cidade()
@@ -36,8 +37,22 @@ namespace _191035_231343.Views
             dgvCidades.DataSource = c.Consultar();
         }
 
+        // limpa campos e carrega o grid com os campos ao carregar o form
         private void FrmCidades_Load(object sender, EventArgs e)
         {
+            limpaControles();
+            carregarGrid("");
+        }
+
+        private void btnIncluir_Click(object sender, EventArgs e)
+        {
+            c = new Cidade()
+            {
+                nome = txtNome.Text,
+                uf = txtUF.Text
+            };
+            c.Incluir();
+
             limpaControles();
             carregarGrid("");
         }
