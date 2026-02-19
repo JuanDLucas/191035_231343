@@ -32,14 +32,14 @@ namespace _191035_231343.Models
             }
         }
 
-        private void Alterar()
+        public void Alterar()
         {
             try
             {
                 // Abre a conexão com o banco
                 Banco.AbrirConexao();
                 // Alimenta o método Command com a instrução desejada e indica conexão utilizada
-                Banco.Comando = new MySqlCommand("UPTADE CIDADES SET NOME = @NOME, UF = @UF WHERE ID = @ID", Banco.Conexao);
+                Banco.Comando = new MySqlCommand("UPDATE CIDADES SET NOME = @NOME, UF = @UF WHERE ID = @ID", Banco.Conexao);
                 // Cria parâmetros utilizados com seus respectivos conteúdos
                 Banco.Comando.Parameters.AddWithValue("@NOME", nome);
                 Banco.Comando.Parameters.AddWithValue("@UF", uf);
@@ -78,6 +78,22 @@ namespace _191035_231343.Models
             }
 
             return Banco.datTabela;
+        }
+
+        public void Excluir()
+        {
+            try
+            {
+                Banco.AbrirConexao();
+                Banco.Comando = new MySqlCommand("delete from cidades where id = @id", Banco.Conexao);
+                Banco.Comando.Parameters.AddWithValue("@id", id);
+                Banco.Comando.ExecuteNonQuery();
+                Banco.FecharConexao();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 
