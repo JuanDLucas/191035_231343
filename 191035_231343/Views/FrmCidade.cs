@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace _191035_231343.Views
 {
-    public partial class FrmCidades : Form
+    public partial class FrmCidade : Form
     {
         Cidade c;
-        public FrmCidades()
+        public FrmCidade()
         {
             InitializeComponent();
         }

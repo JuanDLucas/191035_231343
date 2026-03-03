@@ -25,7 +25,7 @@ namespace _191035_231343
 
         private void cidadesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmCidades form = new FrmCidades();
+            FrmCidade form = new FrmCidade();
             form.Show();
         }
 
