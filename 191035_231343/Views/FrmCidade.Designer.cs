@@ -1,6 +1,6 @@
 ﻿namespace _191035_231343.Views
 {
-    partial class FrmCidades
+    partial class FrmCidade
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCidades));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCidade));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvCidades = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();

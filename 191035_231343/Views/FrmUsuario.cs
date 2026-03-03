@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace _191035_231343.Views
 {
-    public partial class FrmUsuarios : Form
+    public partial class FrmUsuario : Form
     {
         Usuario u;
-        public FrmUsuarios()
+        public FrmUsuario()
         {
             InitializeComponent();
         }
