@@ -31,7 +31,7 @@ namespace _191035_231343
 
         private void usuáriosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmUsuarios form = new FrmUsuarios();
+            FrmUsuario form = new FrmUsuario();
             form.Show();
         }
     }

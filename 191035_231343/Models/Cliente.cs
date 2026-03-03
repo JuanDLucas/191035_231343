@@ -25,7 +25,7 @@ namespace _191035_231343.Models
             try
             {
                 Banco.Comando = new MySqlCommand("SELECT cl.*, ci.nome cidade, " +
-                        "ci.uf FROM CLientes cl inner join Cidades ci on (ci.id = cl.idCidaade) " +
+                        "ci.uf FROM Clientes cl inner join Cidades ci on (ci.id = cl.idCidade) " +
                     "where cl.nome like ?Nome order by cl.nome", Banco.Conexao);
                 Banco.Comando.Parameters.AddWithValue("@Nome", nome + "%");
                 Banco.Adaptador = new MySqlDataAdapter(Banco.Comando);
@@ -48,7 +48,7 @@ namespace _191035_231343.Models
         {
             try
             {
-                Banco.Conexao.Open();
+                Banco.AbrirConexao();
                 Banco.Comando = new MySqlCommand(
                     "INSERT into clientes (nome, idCidade, datNasc, renda, cpf, foto, venda)" +
                     "values (@nome, @idCidade, @dataNasc, @renda, @cpf, @foto, @venda)", Banco.Conexao);
@@ -62,7 +62,7 @@ namespace _191035_231343.Models
                 Banco.Comando.Parameters.AddWithValue("@id", id);
 
                 Banco.Comando.ExecuteNonQuery();
-                Banco.Conexao.Close();
+                Banco.FecharConexao();
 
             }
 
@@ -76,7 +76,7 @@ namespace _191035_231343.Models
         {
             try
             {
-                Banco.Conexao.Open();
+                Banco.AbrirConexao();
                 Banco.Comando = new MySqlCommand(
                     "UPDATE clientes SET nome = @nome,  idCidade = @idCidade, dataNasc = @dataNasc, " +
                     "renda = @renda, cpf = @cpf, foto = @foto, venda = @venda WHERE id = @id", Banco.Conexao);
@@ -90,7 +90,7 @@ namespace _191035_231343.Models
                 Banco.Comando.Parameters.AddWithValue("@id", id);
 
                 Banco.Comando.ExecuteNonQuery();
-                Banco.Conexao.Close();
+                Banco.FecharConexao();
 
             }
             catch (Exception e)
@@ -103,12 +103,12 @@ namespace _191035_231343.Models
         {
             try
             {
-                Banco.Conexao.Open();
+                Banco.AbrirConexao();
                 Banco.Comando = new MySqlCommand("DELETE FROM clientes WHERE id = @id", Banco.Conexao);
                 Banco.Comando.Parameters.AddWithValue("@id", id);
 
                 Banco.Comando.ExecuteNonQuery();
-                Banco.Conexao.Close();
+                Banco.FecharConexao();
 
 
             }
