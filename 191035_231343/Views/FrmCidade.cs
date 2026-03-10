@@ -48,7 +48,7 @@ namespace _191035_231343.Views
         {
             // c = novo objeto
             // Cidade = classe 
-
+            
             // cria um novo(new) objeto(c ou "inicial") da classe(cidade ou "nome da classe")
             c = new Cidade()
             {

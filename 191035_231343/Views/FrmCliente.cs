@@ -13,8 +13,14 @@ namespace _191035_231343.Views
 {
     public partial class FrmCliente : Form
     {
+        // objetos
         Cidade ci;
         Cliente cl;
+
+        public FrmCliente()
+        {
+            InitializeComponent();
+        }
 
         void limpaControles()
         {
@@ -29,11 +35,38 @@ namespace _191035_231343.Views
             chkVenda.Checked = false;
         }
 
-        public FrmCliente()
+        void carregarGrid(string pesquisa)
         {
-            InitializeComponent();
+            cl = new Cliente()
+            {
+                nome = pesquisa
+            };
+            dgvClientes.DataSource = cl.Consultar();
         }
 
-        
+        private void FrmCliente_Load(object sender, EventArgs e)
+        {
+            // cria novo objeto do tipo cidade
+            ci = new Cidade();
+            cboCidades.DataSource = ci.Consultar();
+            cboCidades.DisplayMember = "nome";
+            cboCidades.ValueMember = "id";
+
+            limpaControles();
+            carregarGrid("");
+
+            //deixa invisível colunas do grid
+            dgvClientes.Columns["idCidade"].Visible = false;
+            dgvClientes.Columns["foto"].Visible = false;
+        }
+
+        private void cboCidades_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboCidades.SelectedIndex != -1)
+            {
+                DataRowView reg = (DataRowView)cboCidades.SelectedItem;
+                txtUF.Text = reg["uf"].ToString();
+            }
+        }
     }
 }

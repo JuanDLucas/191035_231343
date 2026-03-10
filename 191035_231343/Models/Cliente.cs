@@ -24,9 +24,11 @@ namespace _191035_231343.Models
         {
             try
             {
-                Banco.Comando = new MySqlCommand("SELECT cl.*, ci.nome cidade, " +
-                        "ci.uf FROM Clientes cl inner join Cidades ci on (ci.id = cl.idCidade) " +
-                    "where cl.nome like ?Nome order by cl.nome", Banco.Conexao);
+                Banco.Comando = new MySqlCommand("SELECT cl.*, ci.nome cidade, ci.uf " +
+                                                "FROM Clientes cl " + 
+                                                "INNER JOIN Cidades ci ON (ci.id = cl.idCidade) " +
+                                                "WHERE cl.nome LIKE ?Nome " + 
+                                                "ORDER BY cl.nome", Banco.Conexao);
                 Banco.Comando.Parameters.AddWithValue("@Nome", nome + "%");
                 Banco.Adaptador = new MySqlDataAdapter(Banco.Comando);
                 Banco.datTabela = new DataTable();
