@@ -68,5 +68,13 @@ namespace _191035_231343.Views
                 txtUF.Text = reg["uf"].ToString();
             }
         }
+
+        private void picFoto_Click(object sender, EventArgs e)
+        {
+            ofdArquivo.InitialDirectory = "X:/fotoCliente/";
+            ofdArquivo.FileName = "";
+            ofdArquivo.ShowDialog();
+            picFoto.ImageLocation = ofdArquivo.FileName;
+        }
     }
 }
