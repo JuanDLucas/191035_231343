@@ -58,7 +58,7 @@ namespace _191035_231343
                 AbrirConexao();
 
                 // Informa a instrução SQL  
-                Comando = new MySqlCommand("CREATE DATABASE IF NOT EXISTS vendas_191125; USE vendas_191125", Conexao);
+                Comando = new MySqlCommand("CREATE DATABASE IF NOT EXISTS vendas; USE vendas", Conexao);
                 // Executa a Query  no MySQL (Raio do Workbench)
                 Comando.ExecuteNonQuery();
 

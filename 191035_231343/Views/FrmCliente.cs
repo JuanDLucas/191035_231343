@@ -76,5 +76,26 @@ namespace _191035_231343.Views
             ofdArquivo.ShowDialog();
             picFoto.ImageLocation = ofdArquivo.FileName;
         }
+
+        private void btnIncluir_Click(object sender, EventArgs e)
+        {
+            if(txtNome.Text == "") return;
+
+            cl = new Cliente()
+            {
+                nome = txtNome.Text,
+                idCidade = (int)cboCidades.SelectedValue,
+                dataNasc = dtpDataNasc.Value,
+                renda = double.Parse(txtRenda.Text),
+                cpf = mskCPF.Text,
+                foto = picFoto.ImageLocation,
+                venda = chkVenda.Checked
+
+            };
+            cl.Incluir();
+
+            limpaControles();
+            carregarGrid("");
+        }
     }
 }

@@ -100,7 +100,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(594, 148);
+            this.label6.Location = new System.Drawing.Point(598, 149);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(42, 13);
             this.label6.TabIndex = 0;
@@ -109,7 +109,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 148);
+            this.label7.Location = new System.Drawing.Point(16, 149);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(30, 13);
             this.label7.TabIndex = 0;
@@ -118,7 +118,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(277, 148);
+            this.label9.Location = new System.Drawing.Point(281, 149);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(107, 13);
             this.label9.TabIndex = 0;
@@ -140,7 +140,7 @@
             // 
             // txtRenda
             // 
-            this.txtRenda.Location = new System.Drawing.Point(597, 164);
+            this.txtRenda.Location = new System.Drawing.Point(601, 165);
             this.txtRenda.Name = "txtRenda";
             this.txtRenda.Size = new System.Drawing.Size(146, 20);
             this.txtRenda.TabIndex = 3;
@@ -173,7 +173,7 @@
             // 
             // mskCPF
             // 
-            this.mskCPF.Location = new System.Drawing.Point(12, 164);
+            this.mskCPF.Location = new System.Drawing.Point(16, 165);
             this.mskCPF.Mask = "999.999.999-99";
             this.mskCPF.Name = "mskCPF";
             this.mskCPF.Size = new System.Drawing.Size(218, 20);
@@ -182,16 +182,16 @@
             // dtpDataNasc
             // 
             this.dtpDataNasc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDataNasc.Location = new System.Drawing.Point(280, 161);
+            this.dtpDataNasc.Location = new System.Drawing.Point(284, 165);
             this.dtpDataNasc.Name = "dtpDataNasc";
             this.dtpDataNasc.Size = new System.Drawing.Size(195, 20);
             this.dtpDataNasc.TabIndex = 7;
             // 
             // picFoto
             // 
-            this.picFoto.Location = new System.Drawing.Point(597, 6);
+            this.picFoto.Location = new System.Drawing.Point(601, 5);
             this.picFoto.Name = "picFoto";
-            this.picFoto.Size = new System.Drawing.Size(168, 139);
+            this.picFoto.Size = new System.Drawing.Size(168, 141);
             this.picFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picFoto.TabIndex = 12;
             this.picFoto.TabStop = false;
@@ -203,9 +203,9 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Location = new System.Drawing.Point(15, 245);
+            this.groupBox2.Location = new System.Drawing.Point(15, 250);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(773, 242);
+            this.groupBox2.Size = new System.Drawing.Size(773, 237);
             this.groupBox2.TabIndex = 42;
             this.groupBox2.TabStop = false;
             // 
@@ -215,10 +215,10 @@
             this.dgvClientes.AllowUserToDeleteRows = false;
             this.dgvClientes.AllowUserToOrderColumns = true;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvClientes.Location = new System.Drawing.Point(6, 77);
+            this.dgvClientes.Location = new System.Drawing.Point(9, 77);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.ReadOnly = true;
-            this.dgvClientes.Size = new System.Drawing.Size(761, 166);
+            this.dgvClientes.Size = new System.Drawing.Size(761, 154);
             this.dgvClientes.TabIndex = 14;
             // 
             // label2
@@ -252,7 +252,7 @@
             this.btnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnFechar.Image = ((System.Drawing.Image)(resources.GetObject("btnFechar.Image")));
             this.btnFechar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFechar.Location = new System.Drawing.Point(582, 190);
+            this.btnFechar.Location = new System.Drawing.Point(589, 195);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(113, 54);
             this.btnFechar.TabIndex = 41;
@@ -265,7 +265,7 @@
             this.btnExcluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
             this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExcluir.Location = new System.Drawing.Point(446, 190);
+            this.btnExcluir.Location = new System.Drawing.Point(453, 195);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(113, 54);
             this.btnExcluir.TabIndex = 40;
@@ -278,7 +278,7 @@
             this.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(306, 190);
+            this.btnCancelar.Location = new System.Drawing.Point(313, 195);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(113, 54);
             this.btnCancelar.TabIndex = 39;
@@ -291,7 +291,7 @@
             this.btnAlterar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnAlterar.Image = ((System.Drawing.Image)(resources.GetObject("btnAlterar.Image")));
             this.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAlterar.Location = new System.Drawing.Point(178, 190);
+            this.btnAlterar.Location = new System.Drawing.Point(185, 195);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(113, 54);
             this.btnAlterar.TabIndex = 38;
@@ -304,13 +304,14 @@
             this.btnIncluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnIncluir.Image = ((System.Drawing.Image)(resources.GetObject("btnIncluir.Image")));
             this.btnIncluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIncluir.Location = new System.Drawing.Point(41, 190);
+            this.btnIncluir.Location = new System.Drawing.Point(48, 195);
             this.btnIncluir.Name = "btnIncluir";
             this.btnIncluir.Size = new System.Drawing.Size(113, 54);
             this.btnIncluir.TabIndex = 37;
             this.btnIncluir.Text = "Incluir";
             this.btnIncluir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnIncluir.UseVisualStyleBackColor = true;
+            this.btnIncluir.Click += new System.EventHandler(this.btnIncluir_Click);
             // 
             // ofdArquivo
             // 
