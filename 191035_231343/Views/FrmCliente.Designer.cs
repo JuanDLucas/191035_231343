@@ -55,6 +55,7 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnIncluir = new System.Windows.Forms.Button();
+            this.ofdArquivo = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
@@ -134,7 +135,7 @@
             // 
             this.txtNome.Location = new System.Drawing.Point(12, 73);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(100, 20);
+            this.txtNome.Size = new System.Drawing.Size(569, 20);
             this.txtNome.TabIndex = 3;
             // 
             // txtRenda
@@ -191,8 +192,10 @@
             this.picFoto.Location = new System.Drawing.Point(597, 6);
             this.picFoto.Name = "picFoto";
             this.picFoto.Size = new System.Drawing.Size(168, 139);
+            this.picFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picFoto.TabIndex = 12;
             this.picFoto.TabStop = false;
+            this.picFoto.Click += new System.EventHandler(this.picFoto_Click);
             // 
             // groupBox2
             // 
@@ -309,6 +312,10 @@
             this.btnIncluir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnIncluir.UseVisualStyleBackColor = true;
             // 
+            // ofdArquivo
+            // 
+            this.ofdArquivo.FileName = "openFileDialog1";
+            // 
             // FrmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -376,5 +383,6 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnIncluir;
+        private System.Windows.Forms.OpenFileDialog ofdArquivo;
     }
 }
