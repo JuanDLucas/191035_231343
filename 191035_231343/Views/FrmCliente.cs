@@ -71,7 +71,7 @@ namespace _191035_231343.Views
 
         private void picFoto_Click(object sender, EventArgs e)
         {
-            ofdArquivo.InitialDirectory = "X:/fotoCliente/";
+            ofdArquivo.InitialDirectory = "X:/ImagensClientes/";
             ofdArquivo.FileName = "";
             ofdArquivo.ShowDialog();
             picFoto.ImageLocation = ofdArquivo.FileName;
@@ -96,6 +96,26 @@ namespace _191035_231343.Views
 
             limpaControles();
             carregarGrid("");
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void dgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvClientes.RowCount > 0)
+            {
+                txtID.Text = dgvClientes.CurrentRow.Cells["id"].Value.ToString();
+                txtNome.Text = dgvClientes.CurrentRow.Cells["nome"].Value.ToString();
+                cboCidades.Text = dgvClientes.CurrentRow.Cells["cidade"].Value.ToString();
+                chkVenda.Checked = (bool)dgvClientes.CurrentRow.Cells["venda"].Value;
+                mskCPF.Text = dgvClientes.CurrentRow.Cells["cpf"].Value.ToString();
+                dtpDataNasc.Text = dgvClientes.CurrentRow.Cells["dataNasc"].Value.ToString();
+                txtRenda.Text = dgvClientes.CurrentRow.Cells["renda"].Value.ToString();
+                picFoto.ImageLocation = dgvClientes.CurrentRow.Cells["foto"].Value.ToString();
+            }
         }
     }
 }
