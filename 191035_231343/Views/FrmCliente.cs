@@ -147,5 +147,22 @@ namespace _191035_231343.Views
         {
             Close();
         }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (txtID.Text == "") return;
+
+            if (MessageBox.Show("Deseja exlcuir o Cliente?", "Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                cl = new Cliente()
+                {
+                    id = int.Parse(txtID.Text)
+                };
+                cl.Excluir();
+
+                limpaControles();
+                carregarGrid("");
+            }
+        }
     }
 }
