@@ -52,7 +52,7 @@ namespace _191035_231343.Models
             {
                 Banco.AbrirConexao();
                 Banco.Comando = new MySqlCommand(
-                    "INSERT into clientes (nome, idCidade, datNasc, renda, cpf, foto, venda)" +
+                    "INSERT into clientes (nome, idCidade, dataNasc, renda, cpf, foto, venda)" +
                     "values (@nome, @idCidade, @dataNasc, @renda, @cpf, @foto, @venda)", Banco.Conexao);
                 Banco.Comando.Parameters.AddWithValue("@nome", nome);
                 Banco.Comando.Parameters.AddWithValue("@idCidade", idCidade);
