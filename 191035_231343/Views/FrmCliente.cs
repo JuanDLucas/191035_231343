@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace _191035_231343.Views
 {
@@ -98,10 +99,7 @@ namespace _191035_231343.Views
             carregarGrid("");
         }
 
-        private void btnFechar_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
+        
 
         private void dgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -115,6 +113,55 @@ namespace _191035_231343.Views
                 dtpDataNasc.Text = dgvClientes.CurrentRow.Cells["dataNasc"].Value.ToString();
                 txtRenda.Text = dgvClientes.CurrentRow.Cells["renda"].Value.ToString();
                 picFoto.ImageLocation = dgvClientes.CurrentRow.Cells["foto"].Value.ToString();
+            }
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            if (txtID.Text == "") return;
+
+            cl = new Cliente()
+            {
+                id = int.Parse(txtID.Text),
+                nome = txtNome.Text,
+                idCidade = (int)cboCidades.SelectedValue,
+                dataNasc = dtpDataNasc.Value,
+                renda = double.Parse(txtRenda.Text),
+                cpf = mskCPF.Text,
+                foto = picFoto.ImageLocation,
+                venda = chkVenda.Checked
+
+            };
+            cl.Alterar();
+
+            limpaControles();
+            carregarGrid("");
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            carregarGrid(txtPesquisa.Text);
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (txtID.Text == "") return;
+
+            if (MessageBox.Show("Deseja exlcuir o Cliente?", "Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                cl = new Cliente()
+                {
+                    id = int.Parse(txtID.Text)
+                };
+                cl.Excluir();
+
+                limpaControles();
+                carregarGrid("");
             }
         }
     }

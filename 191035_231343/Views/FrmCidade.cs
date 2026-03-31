@@ -96,7 +96,7 @@ namespace _191035_231343.Views
         {
             if(txtID.Text == "") return;
 
-            if(MessageBox.Show("Deseja exluir a cidade?", "Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if(MessageBox.Show("Deseja exlcuir a cidade?", "Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 c = new Cidade()
                 {

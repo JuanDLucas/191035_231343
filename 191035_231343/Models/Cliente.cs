@@ -74,7 +74,7 @@ namespace _191035_231343.Models
             }
         }
 
-        public void ALterar()
+        public void Alterar()
         {
             try
             {
