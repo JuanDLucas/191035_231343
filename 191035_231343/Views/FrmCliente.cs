@@ -117,5 +117,27 @@ namespace _191035_231343.Views
                 picFoto.ImageLocation = dgvClientes.CurrentRow.Cells["foto"].Value.ToString();
             }
         }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            if (txtID.Text == "") return;
+
+            cl = new Cliente()
+            {
+                id = int.Parse(txtID.Text),
+                nome = txtNome.Text,
+                idCidade = (int)cboCidades.SelectedValue,
+                dataNasc = dtpDataNasc.Value,
+                renda = double.Parse(txtRenda.Text),
+                cpf = mskCPF.Text,
+                foto = picFoto.ImageLocation,
+                venda = chkVenda.Checked
+
+            };
+            cl.Alterar();
+
+            limpaControles();
+            carregarGrid("");
+        }
     }
 }
