@@ -26,7 +26,7 @@ namespace _191035_231343
             try
             {
                 // Estabelece conexão com o banco de dados
-                Conexao = new MySqlConnection("server=localhost;port=3307;uid=root;pwd=");
+                Conexao = new MySqlConnection("server=localhost;port=3307;uid=root;pwd=etecjau");
 
                 // Abre conexão com o banco
                 Conexao.Open();
@@ -93,6 +93,23 @@ namespace _191035_231343
                 //                           "(id integer auto_increment primary key, " +
                 //                           "categoria char(20))", Conexao);
                 //Comando.ExecuteNonQuery();
+
+                // cria tabela venda_cab
+                Comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS VENDA_CAB " +
+                                           "(id integer auto_increment primary key, " +
+                                           "idCliente integer, " +
+                                           "data date, " +
+                                           "total decimal(10, 2))", Conexao);
+                Comando.ExecuteNonQuery();
+
+                // cria tabela venda_det
+                Comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS VENDA_DET " +
+                                           "(id integer auto_increment primary key, " +
+                                           "idVenda integer, " +
+                                           "idProduto integer, " +
+                                           "qtde decimal(10, 3), " +
+                                           "vlrUnit decimal(10, 2))", Conexao);
+                Comando.ExecuteNonQuery();
 
 
 
