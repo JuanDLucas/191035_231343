@@ -16,5 +16,7 @@ namespace _191035_231343.Views
         {
             InitializeComponent();
         }
+
+        
     }
 }
