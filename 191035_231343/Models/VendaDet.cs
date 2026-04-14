@@ -1,0 +1,12 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _191035_231343.Models
+{
+    internal class VendaDet
+    {
+    }
+}
