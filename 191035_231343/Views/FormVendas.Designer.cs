@@ -47,11 +47,13 @@
             this.picCliente = new System.Windows.Forms.PictureBox();
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.txtCidade = new System.Windows.Forms.TextBox();
+            this.txtUF = new System.Windows.Forms.TextBox();
             this.grbProdutos = new System.Windows.Forms.GroupBox();
             this.cboProdutos = new System.Windows.Forms.ComboBox();
             this.btnRemover = new System.Windows.Forms.Button();
             this.btnInserir = new System.Windows.Forms.Button();
             this.picProduto = new System.Windows.Forms.PictureBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.txtEstoque = new System.Windows.Forms.TextBox();
             this.Preco = new System.Windows.Forms.TextBox();
             this.txtQuantidade = new System.Windows.Forms.TextBox();
@@ -60,8 +62,6 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGravar = new System.Windows.Forms.Button();
             this.lblTotal = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtUF = new System.Windows.Forms.TextBox();
             this.grbClientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCliente)).BeginInit();
             this.grbProdutos.SuspendLayout();
@@ -246,6 +246,13 @@
             this.txtCidade.Size = new System.Drawing.Size(448, 20);
             this.txtCidade.TabIndex = 1;
             // 
+            // txtUF
+            // 
+            this.txtUF.Location = new System.Drawing.Point(529, 88);
+            this.txtUF.Name = "txtUF";
+            this.txtUF.Size = new System.Drawing.Size(75, 20);
+            this.txtUF.TabIndex = 1;
+            // 
             // grbProdutos
             // 
             this.grbProdutos.Controls.Add(this.cboProdutos);
@@ -298,6 +305,15 @@
             this.picProduto.Size = new System.Drawing.Size(160, 135);
             this.picProduto.TabIndex = 2;
             this.picProduto.TabStop = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(7, 141);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(49, 13);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Estoque:";
             // 
             // txtEstoque
             // 
@@ -370,22 +386,6 @@
             this.lblTotal.TabIndex = 0;
             this.lblTotal.Text = "R$ 0,00";
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(7, 141);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(49, 13);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Estoque:";
-            // 
-            // txtUF
-            // 
-            this.txtUF.Location = new System.Drawing.Point(529, 88);
-            this.txtUF.Name = "txtUF";
-            this.txtUF.Size = new System.Drawing.Size(75, 20);
-            this.txtUF.TabIndex = 1;
-            // 
             // FormVendas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -400,7 +400,7 @@
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.label8);
             this.Name = "FormVendas";
-            this.Text = "Formulário de Vendas";
+            this.Text = "it b";
             this.grbClientes.ResumeLayout(false);
             this.grbClientes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCliente)).EndInit();
