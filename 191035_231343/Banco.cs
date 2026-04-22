@@ -105,7 +105,7 @@ namespace _191035_231343
                 // cria tabela venda_det
                 Comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS VENDA_DET " +
                                            "(id integer auto_increment primary key, " +
-                                           "idVenda integer, " +
+                                           "idVendaCab integer, " +
                                            "idProduto integer, " +
                                            "qtde decimal(10, 3), " +
                                            "vlrUnit decimal(10, 2))", Conexao);
