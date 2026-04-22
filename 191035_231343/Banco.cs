@@ -105,12 +105,21 @@ namespace _191035_231343
                 // cria tabela venda_det
                 Comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS VENDA_DET " +
                                            "(id integer auto_increment primary key, " +
-                                           "idVenda integer, " +
+                                           "idVendaCab integer, " +
                                            "idProduto integer, " +
                                            "qtde decimal(10, 3), " +
                                            "vlrUnit decimal(10, 2))", Conexao);
                 Comando.ExecuteNonQuery();
-
+                // tabela produtos
+                Comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS Produtos " +
+                                           "(id integer auto_increment primary key, " +
+                                           "descricao char(40), " +
+                                           "idCategoria integer, " +
+                                           "idMarca integer, " +
+                                           "estoque decimal(10, 3), " +
+                                           "valorVenda decimal(10, 2), " +
+                                           "foto varchar(100))", Conexao);
+                Comando.ExecuteNonQuery();
 
 
 

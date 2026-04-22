@@ -55,7 +55,7 @@
             this.picProduto = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtEstoque = new System.Windows.Forms.TextBox();
-            this.Preco = new System.Windows.Forms.TextBox();
+            this.txtPreco = new System.Windows.Forms.TextBox();
             this.txtQuantidade = new System.Windows.Forms.TextBox();
             this.dgvProdutos = new System.Windows.Forms.DataGridView();
             this.btnFechar = new System.Windows.Forms.Button();
@@ -264,7 +264,7 @@
             this.grbProdutos.Controls.Add(this.picProduto);
             this.grbProdutos.Controls.Add(this.label12);
             this.grbProdutos.Controls.Add(this.txtEstoque);
-            this.grbProdutos.Controls.Add(this.Preco);
+            this.grbProdutos.Controls.Add(this.txtPreco);
             this.grbProdutos.Controls.Add(this.txtQuantidade);
             this.grbProdutos.Location = new System.Drawing.Point(12, 186);
             this.grbProdutos.Name = "grbProdutos";
@@ -322,12 +322,12 @@
             this.txtEstoque.Size = new System.Drawing.Size(148, 20);
             this.txtEstoque.TabIndex = 1;
             // 
-            // Preco
+            // txtPreco
             // 
-            this.Preco.Location = new System.Drawing.Point(76, 99);
-            this.Preco.Name = "Preco";
-            this.Preco.Size = new System.Drawing.Size(148, 20);
-            this.Preco.TabIndex = 1;
+            this.txtPreco.Location = new System.Drawing.Point(76, 99);
+            this.txtPreco.Name = "txtPreco";
+            this.txtPreco.Size = new System.Drawing.Size(148, 20);
+            this.txtPreco.TabIndex = 1;
             // 
             // txtQuantidade
             // 
@@ -400,7 +400,7 @@
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.label8);
             this.Name = "FormVendas";
-            this.Text = "it b";
+            this.Text = "Formulário de Vendas";
             this.grbClientes.ResumeLayout(false);
             this.grbClientes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCliente)).EndInit();
@@ -441,7 +441,7 @@
         private System.Windows.Forms.Button btnInserir;
         private System.Windows.Forms.PictureBox picProduto;
         private System.Windows.Forms.TextBox txtEstoque;
-        private System.Windows.Forms.TextBox Preco;
+        private System.Windows.Forms.TextBox txtPreco;
         private System.Windows.Forms.TextBox txtQuantidade;
         private System.Windows.Forms.Button btnFechar;
         private System.Windows.Forms.Button btnCancelar;
