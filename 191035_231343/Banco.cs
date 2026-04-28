@@ -26,7 +26,7 @@ namespace _191035_231343
             try
             {
                 // Estabelece conexão com o banco de dados
-                Conexao = new MySqlConnection("server=localhost;port=3307;uid=root;pwd=");
+                Conexao = new MySqlConnection("server=localhost;port=3307;uid=root;pwd=etecjau");
 
                 // Abre conexão com o banco
                 Conexao.Open();
