@@ -25,6 +25,8 @@ namespace _191035_231343.Models
                 Banco.Comando = new MySqlCommand(
                     "INSERT INTO VENDA_DET (idVendaCab, idProduto, qtde, vlrUnit) " +
                     "VALUES (@idVendaCab, @idProduto, @qtde, @vlrUnit)", Banco.Conexao);
+                // idVendaCab recebe o retorno (int) do id ao inserir o vendaCab
+                // amarra idVendaCab ao VendaDet
                 Banco.Comando.Parameters.AddWithValue("@idVendaCab", idVendaCab);
                 Banco.Comando.Parameters.AddWithValue("@idProduto", idProduto);
                 Banco.Comando.Parameters.AddWithValue("@qtde", qtde);
