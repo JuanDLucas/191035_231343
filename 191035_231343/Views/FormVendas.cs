@@ -122,13 +122,28 @@ namespace _191035_231343.Views
                 return;
             }
 
-            dgvProdutos.Rows.Add(cboProdutos.SelectedValue, cboProdutos.Text, txtQuantidade.Text, txtPreco.Text);
+            dgvProdutos.Rows.Add(cboProdutos.SelectedValue, cboProdutos.Text, 
+                                txtQuantidade.Text, txtPreco.Text);
             
             double preco = double.Parse(txtPreco.Text);
 
             total += quantidade * preco;
             lblTotal.Text = total.ToString("C");
             limpaProduto();
+        }
+
+        private void btnRemover_Click(object sender, EventArgs e)
+        {
+            if (dgvProdutos.RowCount > 0)
+            {
+                double quantidade = double.Parse(dgvProdutos.CurrentRow.Cells[2].Value.ToString());
+                double preco = double.Parse(dgvProdutos.CurrentRow.Cells[3].Value.ToString());
+
+                total -= quantidade * preco;
+                lblTotal.Text = total.ToString("C");
+
+                dgvProdutos.Rows.RemoveAt(dgvProdutos.CurrentRow.Index);
+            }
         }
     }
 }
