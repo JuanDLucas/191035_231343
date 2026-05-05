@@ -65,6 +65,10 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGravar = new System.Windows.Forms.Button();
             this.lblTotal = new System.Windows.Forms.Label();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qtde = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorVenda = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grbClientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCliente)).BeginInit();
             this.grbProdutos.SuspendLayout();
@@ -233,6 +237,7 @@
             this.picCliente.Location = new System.Drawing.Point(610, 16);
             this.picCliente.Name = "picCliente";
             this.picCliente.Size = new System.Drawing.Size(160, 135);
+            this.picCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picCliente.TabIndex = 2;
             this.picCliente.TabStop = false;
             // 
@@ -339,6 +344,7 @@
             this.picProduto.Location = new System.Drawing.Point(611, 19);
             this.picProduto.Name = "picProduto";
             this.picProduto.Size = new System.Drawing.Size(160, 128);
+            this.picProduto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picProduto.TabIndex = 2;
             this.picProduto.TabStop = false;
             // 
@@ -378,6 +384,11 @@
             this.dgvProdutos.AllowUserToDeleteRows = false;
             this.dgvProdutos.AllowUserToOrderColumns = true;
             this.dgvProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProdutos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.descricao,
+            this.qtde,
+            this.valorVenda});
             this.dgvProdutos.Location = new System.Drawing.Point(12, 346);
             this.dgvProdutos.Name = "dgvProdutos";
             this.dgvProdutos.ReadOnly = true;
@@ -423,6 +434,30 @@
             this.lblTotal.Size = new System.Drawing.Size(72, 20);
             this.lblTotal.TabIndex = 0;
             this.lblTotal.Text = "R$ 0,00";
+            // 
+            // id
+            // 
+            this.id.HeaderText = "Código";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // descricao
+            // 
+            this.descricao.HeaderText = "Produto";
+            this.descricao.Name = "descricao";
+            this.descricao.ReadOnly = true;
+            // 
+            // qtde
+            // 
+            this.qtde.HeaderText = "Quantidade";
+            this.qtde.Name = "qtde";
+            this.qtde.ReadOnly = true;
+            // 
+            // valorVenda
+            // 
+            this.valorVenda.HeaderText = "Preço";
+            this.valorVenda.Name = "valorVenda";
+            this.valorVenda.ReadOnly = true;
             // 
             // FormVendas
             // 
@@ -491,5 +526,9 @@
         private System.Windows.Forms.TextBox txtMarca;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descricao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn qtde;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valorVenda;
     }
 }

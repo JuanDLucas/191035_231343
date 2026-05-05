@@ -23,7 +23,7 @@ namespace _191035_231343.Models
         {
             try
             {
-                Banco.Comando = new MySqlCommand("SELECT p.*, m.marca, c.catgoria FROM Produtos p " +
+                Banco.Comando = new MySqlCommand("SELECT p.*, m.marca, c.categoria FROM Produtos p " +
                                                  "INNER JOIN Marcas m ON m.id = p.idMarca " + 
                                                  "INNER JOIN Categorias c ON c.id = p.idCategoria " +
                                                  "WHERE p.descricao LIKE @Descricao ORDER BY p.descricao", Banco.Conexao);
@@ -47,7 +47,7 @@ namespace _191035_231343.Models
             try
             {
                 Banco.AbrirConexao();
-                Banco.Comando = new MySqlCommand("UPDATE produtos SET Estoque = Estoque - @qtde" +
+                Banco.Comando = new MySqlCommand("UPDATE produtos SET estoque = estoque - @qtde " +
                                                  "WHERE id = @id", Banco.Conexao);
                 Banco.Comando.Parameters.AddWithValue("@qtde", qtde);
                 Banco.Comando.Parameters.AddWithValue("@id", id);

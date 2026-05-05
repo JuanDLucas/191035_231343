@@ -32,7 +32,7 @@ namespace _191035_231343.Views
             cboClientes.ValueMember = "id";
 
             p = new Produto();
-            cboProdutos.DataSource = c.Consultar();
+            cboProdutos.DataSource = p.Consultar();
             cboProdutos.DisplayMember = "descricao";
             cboProdutos.ValueMember = "id";
 
@@ -101,16 +101,17 @@ namespace _191035_231343.Views
 
         private void cboProdutos_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cboClientes.SelectedIndex != -1)
+            if (cboProdutos.SelectedIndex != -1)
             {
                 DataRowView reg = (DataRowView)cboProdutos.SelectedItem;
+
                 txtEstoque.Text = reg["estoque"].ToString();
                 txtPreco.Text = reg["valorVenda"].ToString();
                 txtMarca.Text = reg["marca"].ToString();
                 txtCategoria.Text = reg["Categoria"].ToString();
                 picProduto.ImageLocation = reg["foto"].ToString();
             }
-            
+
         }
 
         private void btnInserir_Click(object sender, EventArgs e)
