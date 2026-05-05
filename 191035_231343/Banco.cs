@@ -89,10 +89,7 @@ namespace _191035_231343
                                            "venda boolean)", Conexao);
                 Comando.ExecuteNonQuery();
 
-                //Comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS CATEGORIAS " +
-                //                           "(id integer auto_increment primary key, " +
-                //                           "categoria char(20))", Conexao);
-                //Comando.ExecuteNonQuery();
+                
 
                 // cria tabela venda_cab
                 Comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS VENDA_CAB " +
@@ -119,6 +116,18 @@ namespace _191035_231343
                                            "estoque decimal(10, 3), " +
                                            "valorVenda decimal(10, 2), " +
                                            "foto varchar(100))", Conexao);
+                Comando.ExecuteNonQuery();
+
+                // tabela de Categoria
+                Comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS CATEGORIAS " +
+                                          "(id integer auto_increment primary key, " +
+                                          "categoria char(20))", Conexao);
+                Comando.ExecuteNonQuery();
+
+                // tabela de Marcas
+                Comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS Marcas " +
+                                          "(id integer auto_increment primary key, " +
+                                          "marca char(20))", Conexao);
                 Comando.ExecuteNonQuery();
 
 
