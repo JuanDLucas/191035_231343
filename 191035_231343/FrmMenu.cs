@@ -40,5 +40,11 @@ namespace _191035_231343
             FrmCliente form = new FrmCliente();
             form.Show();
         }
+
+        private void vendasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FormVendas form = new FormVendas();
+            form.Show();
+        }
     }
 }

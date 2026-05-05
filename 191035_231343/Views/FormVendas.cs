@@ -32,7 +32,7 @@ namespace _191035_231343.Views
             cboClientes.ValueMember = "id";
 
             p = new Produto();
-            cboProdutos.DataSource = c.Consultar();
+            cboProdutos.DataSource = p.Consultar();
             cboProdutos.DisplayMember = "descricao";
             cboProdutos.ValueMember = "id";
 
@@ -101,12 +101,17 @@ namespace _191035_231343.Views
 
         private void cboProdutos_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DataRowView reg = (DataRowView)cboProdutos.SelectedItem;
-            txtEstoque.Text = reg["estoque"].ToString();
-            txtPreco.Text = reg["valorVenda"].ToString(); 
-            txtMarca.Text = reg["marca"].ToString(); 
-            txtCategoria.Text = reg["Categoria"].ToString();
-            picProduto.ImageLocation = reg["foto"].ToString();
+            if (cboProdutos.SelectedIndex != -1)
+            {
+                DataRowView reg = (DataRowView)cboProdutos.SelectedItem;
+
+                txtEstoque.Text = reg["estoque"].ToString();
+                txtPreco.Text = reg["valorVenda"].ToString();
+                txtMarca.Text = reg["marca"].ToString();
+                txtCategoria.Text = reg["Categoria"].ToString();
+                picProduto.ImageLocation = reg["foto"].ToString();
+            }
+
         }
 
         private void btnInserir_Click(object sender, EventArgs e)
@@ -144,6 +149,38 @@ namespace _191035_231343.Views
 
                 dgvProdutos.Rows.RemoveAt(dgvProdutos.CurrentRow.Index);
             }
+        }
+
+        private void btnGravar_Click(object sender, EventArgs e)
+        {
+            vc = new VendaCab()
+            {
+                idCliente = (int)cboClientes.SelectedValue,
+                data = DateTime.Now,
+                total = total,
+            };
+
+            int idVenda = vc.Incluir();
+
+            foreach (DataGridViewRow linha in dgvProdutos.Rows)
+            {
+                vd = new VendaDet()
+                {
+                    idVendaCab = idVenda,
+                    idProduto = Convert.ToInt32(linha.Cells[0].Value),
+                    qtde = Convert.ToDouble(linha.Cells[2].Value),
+                    vlrUnit = Convert.ToDouble(linha.Cells[3].Value)
+                };
+                vd.Incluir();
+
+                p = new Produto()
+                {
+                    id = (int)linha.Cells[0].Value
+                };
+                p.atualizarEstoque(Convert.ToDouble(linha.Cells[2].Value));
+            }
+
+            btnCancelar.PerformClick();
         }
     }
 }
