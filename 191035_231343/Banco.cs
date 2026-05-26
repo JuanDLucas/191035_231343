@@ -130,6 +130,18 @@ namespace _191035_231343
                                           "marca char(20))", Conexao);
                 Comando.ExecuteNonQuery();
 
+                // tabela de Contas a receber
+                Comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS Contas_Receber " +
+                                           "(id integer auto_increment primary key, " +
+                                           "idVendaCab integer, " +
+                                           "parcela tinyint, " +
+                                           "data_vencto date, " +
+                                           "data_pagto date, " +
+                                           "vlr_parcela double(10,2), " +
+                                           "status bool)", Conexao);
+                Comando.ExecuteNonQuery();
+
+
 
 
                 // Chama a função para fechar a conexão com o banco

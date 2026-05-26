@@ -61,14 +61,14 @@
             this.txtPreco = new System.Windows.Forms.TextBox();
             this.txtQuantidade = new System.Windows.Forms.TextBox();
             this.dgvProdutos = new System.Windows.Forms.DataGridView();
-            this.btnFechar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnGravar = new System.Windows.Forms.Button();
-            this.lblTotal = new System.Windows.Forms.Label();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.qtde = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valorVenda = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnFechar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnGravar = new System.Windows.Forms.Button();
+            this.lblTotal = new System.Windows.Forms.Label();
             this.grbClientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCliente)).BeginInit();
             this.grbProdutos.SuspendLayout();
@@ -395,6 +395,30 @@
             this.dgvProdutos.Size = new System.Drawing.Size(777, 174);
             this.dgvProdutos.TabIndex = 3;
             // 
+            // id
+            // 
+            this.id.HeaderText = "Código";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // descricao
+            // 
+            this.descricao.HeaderText = "Produto";
+            this.descricao.Name = "descricao";
+            this.descricao.ReadOnly = true;
+            // 
+            // qtde
+            // 
+            this.qtde.HeaderText = "Quantidade";
+            this.qtde.Name = "qtde";
+            this.qtde.ReadOnly = true;
+            // 
+            // valorVenda
+            // 
+            this.valorVenda.HeaderText = "Preço";
+            this.valorVenda.Name = "valorVenda";
+            this.valorVenda.ReadOnly = true;
+            // 
             // btnFechar
             // 
             this.btnFechar.Location = new System.Drawing.Point(714, 529);
@@ -403,6 +427,7 @@
             this.btnFechar.TabIndex = 4;
             this.btnFechar.Text = "Fechar";
             this.btnFechar.UseVisualStyleBackColor = true;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // btnCancelar
             // 
@@ -434,30 +459,6 @@
             this.lblTotal.Size = new System.Drawing.Size(72, 20);
             this.lblTotal.TabIndex = 0;
             this.lblTotal.Text = "R$ 0,00";
-            // 
-            // id
-            // 
-            this.id.HeaderText = "Código";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            // 
-            // descricao
-            // 
-            this.descricao.HeaderText = "Produto";
-            this.descricao.Name = "descricao";
-            this.descricao.ReadOnly = true;
-            // 
-            // qtde
-            // 
-            this.qtde.HeaderText = "Quantidade";
-            this.qtde.Name = "qtde";
-            this.qtde.ReadOnly = true;
-            // 
-            // valorVenda
-            // 
-            this.valorVenda.HeaderText = "Preço";
-            this.valorVenda.Name = "valorVenda";
-            this.valorVenda.ReadOnly = true;
             // 
             // FormVendas
             // 
