@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNegociacaoVenda));
             this.grbVenda = new System.Windows.Forms.GroupBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtTotal = new System.Windows.Forms.TextBox();
@@ -171,6 +172,7 @@
             this.txtEntrada.Name = "txtEntrada";
             this.txtEntrada.Size = new System.Drawing.Size(178, 22);
             this.txtEntrada.TabIndex = 9;
+            this.txtEntrada.TextChanged += new System.EventHandler(this.txtEntrada_TextChanged);
             // 
             // label5
             // 
@@ -232,6 +234,7 @@
             // 
             // dtpVencto
             // 
+            this.dtpVencto.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpVencto.Location = new System.Drawing.Point(166, 76);
             this.dtpVencto.Name = "dtpVencto";
             this.dtpVencto.Size = new System.Drawing.Size(171, 22);
@@ -277,11 +280,14 @@
             // btnFinanceiro
             // 
             this.btnFinanceiro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinanceiro.Image = ((System.Drawing.Image)(resources.GetObject("btnFinanceiro.Image")));
+            this.btnFinanceiro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFinanceiro.Location = new System.Drawing.Point(540, 306);
             this.btnFinanceiro.Name = "btnFinanceiro";
             this.btnFinanceiro.Size = new System.Drawing.Size(219, 63);
             this.btnFinanceiro.TabIndex = 2;
             this.btnFinanceiro.Text = "Gerar Financeiro";
+            this.btnFinanceiro.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnFinanceiro.UseVisualStyleBackColor = true;
             // 
             // FrmNegociacaoVenda
