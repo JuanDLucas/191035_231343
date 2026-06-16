@@ -180,6 +180,12 @@ namespace _191035_231343.Views
                 p.atualizarEstoque(Convert.ToDouble(linha.Cells[2].Value));
             }
 
+            FrmNegociacaoVenda frm = new FrmNegociacaoVenda(idVenda,
+                                                            (int)cboClientes.SelectedValue,
+                                                            total,
+                                                            cboClientes.Text);
+            frm.ShowDialog();
+
             btnCancelar.PerformClick();
         }
 

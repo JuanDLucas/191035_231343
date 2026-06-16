@@ -117,6 +117,12 @@
     <Compile Include="Views\FormVendas.Designer.cs">
       <DependentUpon>FormVendas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\FrmCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmCaixa.Designer.cs">
+      <DependentUpon>FrmCaixa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\FrmCidade.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +161,9 @@
     </Compile>
     <EmbeddedResource Include="Views\FormVendas.resx">
       <DependentUpon>FormVendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmCaixa.resx">
+      <DependentUpon>FrmCaixa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FrmCidade.resx">
       <DependentUpon>FrmCidade.cs</DependentUpon>

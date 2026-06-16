@@ -22,7 +22,8 @@ namespace _191035_231343.Models
                 Banco.Comando = new MySqlCommand("INSERT INTO CONTAS_RECEBER (idVendaCab, parcela, " +
                                                 "data_vencto, vlr_parcela, status) " +
                                                 "VALUES (@idVendaCab, @parcela, @data_vencto, " +
-                                                "@vlr_parcela, @status)", Banco.Conexao);                                              
+                                                "@vlr_parcela, @status)", Banco.Conexao);
+                Banco.Comando.Parameters.AddWithValue("@idVendaCab", idVendaCab);
                 Banco.Comando.Parameters.AddWithValue("@parcela", parcela);
                 Banco.Comando.Parameters.AddWithValue("@data_vencto", data_vencto);
                 Banco.Comando.Parameters.AddWithValue("@vlr_parcela", vlr_parcela);

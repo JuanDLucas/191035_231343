@@ -234,7 +234,7 @@
             // 
             // dtpVencto
             // 
-            this.dtpVencto.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpVencto.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpVencto.Location = new System.Drawing.Point(166, 76);
             this.dtpVencto.Name = "dtpVencto";
             this.dtpVencto.Size = new System.Drawing.Size(171, 22);
@@ -243,9 +243,25 @@
             // nudQtdeParcela
             // 
             this.nudQtdeParcela.Location = new System.Drawing.Point(88, 39);
+            this.nudQtdeParcela.Maximum = new decimal(new int[] {
+            24,
+            0,
+            0,
+            0});
+            this.nudQtdeParcela.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nudQtdeParcela.Name = "nudQtdeParcela";
             this.nudQtdeParcela.Size = new System.Drawing.Size(72, 22);
             this.nudQtdeParcela.TabIndex = 11;
+            this.nudQtdeParcela.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudQtdeParcela.ValueChanged += new System.EventHandler(this.nudQtdeParcela_ValueChanged);
             // 
             // label11
             // 
@@ -289,6 +305,7 @@
             this.btnFinanceiro.Text = "Gerar Financeiro";
             this.btnFinanceiro.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnFinanceiro.UseVisualStyleBackColor = true;
+            this.btnFinanceiro.Click += new System.EventHandler(this.btnFinanceiro_Click);
             // 
             // FrmNegociacaoVenda
             // 

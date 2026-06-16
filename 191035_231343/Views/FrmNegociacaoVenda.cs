@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using _191035_231343.Models;
 
 namespace _191035_231343.Views
 {
@@ -17,6 +18,32 @@ namespace _191035_231343.Views
         private void txtEntrada_TextChanged(object sender, EventArgs e)
         {
             calcularParcela();
+        }
+
+        private void nudQtdeParcela_ValueChanged(object sender, EventArgs e)
+        {
+            calcularParcela();
+        }
+
+        private void btnFinanceiro_Click(object sender, EventArgs e)
+        {
+            // inicia qtd de parcela (0 + 1)
+            // enquanto variavel for menor q a qtd de parcela solicitada, acrescenta +1
+            for (byte NumPar = 0; NumPar < nudQtdeParcela.Value; NumPar++)
+            {
+                NegociacaoVenda n = new NegociacaoVenda()
+                {
+                    idVendaCab = Convert.ToInt16(txtIdVenda.Text),
+                    parcela = Convert.ToByte(NumPar + 1),
+                    data_vencto = dtpVencto.Value.AddMonths(NumPar),
+                    vlr_parcela = parcela,
+                    status = false
+                };
+
+                n.Incluir();
+            }
+
+            Close();    
         }
 
         public FrmNegociacaoVenda(int idVenda, int idCliente, double total, string nome)
