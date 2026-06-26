@@ -141,6 +141,17 @@ namespace _191035_231343
                                            "status bool)", Conexao);
                 Comando.ExecuteNonQuery();
 
+                Comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS Caixa " +
+                                           "(id integer auto_increment primary key, " +
+                                           "idContas integer, " +
+                                           "dinheiro decimal(10, 2), " +
+                                           "cheque decimal(10, 2), " +
+                                           "cartao decimal(10, 2), " +
+                                           "pix decimal(10, 2), " +
+                                           "boleto decimal(10, 2), " +
+                                           "uf char(02))", Conexao);
+                Comando.ExecuteNonQuery();
+
 
 
 

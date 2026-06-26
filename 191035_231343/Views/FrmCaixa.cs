@@ -16,5 +16,10 @@ namespace _191035_231343.Views
         {
             InitializeComponent();
         }
+
+        private void FrmCaixa_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
